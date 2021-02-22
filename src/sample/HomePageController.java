@@ -16,11 +16,10 @@ public class HomePageController {
     Button startTrackingButton;
     @FXML
     Button viewActivityButton;
-    
-    
+
 
     public void startTracking(javafx.event.ActionEvent event) throws IOException {
-        Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("TrackingPage.fxml"));
         stage.setScene(new Scene(root, 700, 275));
         stage.show();
