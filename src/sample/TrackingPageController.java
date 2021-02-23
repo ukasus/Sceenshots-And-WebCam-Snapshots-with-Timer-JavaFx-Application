@@ -2,9 +2,14 @@ package sample;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
@@ -12,10 +17,12 @@ import org.opencv.videoio.VideoCapture;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
 import java.awt.image.WritableRaster;
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -37,6 +44,7 @@ public class TrackingPageController implements Initializable {
 
 
     static int timeToSS = 0;
+    static Stage stage;
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy-HH-mm-ss");
     DateTimeFormatter dtfForDirectory = DateTimeFormatter.ofPattern("dd-MM-yyyy");
     LocalDateTime now;
@@ -181,5 +189,15 @@ public class TrackingPageController implements Initializable {
                 takeSnapShotThroughWebcam();
             }
         }).start();
+    }
+
+
+
+    public void backToHomePage(javafx.event.ActionEvent event) throws IOException {
+        stopCount();
+
+        Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+        stage.setScene(new Scene(root, 400, 275));
+        stage.show();
     }
 }

@@ -16,19 +16,29 @@ public class HomePageController {
     Button startTrackingButton;
     @FXML
     Button viewActivityButton;
+    static Stage stage;
 
 
     public void startTracking(javafx.event.ActionEvent event) throws IOException {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("TrackingPage.fxml"));
+        TrackingPageController.stage=stage;
         stage.setScene(new Scene(root, 700, 275));
         stage.show();
     }
 
     public void viewActivity(ActionEvent event) throws IOException {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("ViewActivityPage.fxml"));
         stage.setScene(new Scene(root, 400, 275));
         stage.show();
+    }
+    public void logout(ActionEvent event) throws IOException
+    {
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("AuthenticationPage.fxml"));
+        stage.setScene(new Scene(root, 400, 275));
+        stage.show();
+
     }
 }

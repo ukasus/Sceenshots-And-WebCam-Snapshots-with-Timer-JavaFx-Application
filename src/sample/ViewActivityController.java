@@ -55,8 +55,16 @@ public class ViewActivityController implements Initializable {
 
     }
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         datePicker.setValue(LocalDate.now());
+    }
+
+    public void backToHomePage(javafx.event.ActionEvent event) throws  IOException{
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+        stage.setScene(new Scene(root, 400, 275));
+        stage.show();
     }
 }
