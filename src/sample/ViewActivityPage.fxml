@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ViewActivityController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="307.0" prefWidth="479.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="sample.ViewActivityController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="98.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="131.0" minHeight="10.0" prefHeight="117.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="109.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+  </rowConstraints>
    <children>
-      <DatePicker maxWidth="-Infinity" promptText="Select a date to continue" VBox.vgrow="ALWAYS">
-         <VBox.margin>
-            <Insets />
-         </VBox.margin>
-      </DatePicker>
+      <DatePicker fx:id="datePicker" prefHeight="49.0" prefWidth="343.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Button fx:id="viewRecords" mnemonicParsing="false" onAction="#checkFolder" prefHeight="30.0" prefWidth="138.0" text="View Records" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="label" text="Select a Date !" GridPane.halignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
    </children>
-</VBox>
+</GridPane>

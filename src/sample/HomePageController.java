@@ -28,7 +28,7 @@ public class HomePageController {
     public void viewActivity(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("ViewActivityPage.fxml"));
-        stage.setScene(new Scene(root, 300, 275));
+        stage.setScene(new Scene(root, 400, 275));
         stage.show();
     }
 }

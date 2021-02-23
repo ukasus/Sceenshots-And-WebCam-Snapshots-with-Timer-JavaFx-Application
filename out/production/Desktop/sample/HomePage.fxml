@@ -22,19 +22,19 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Welcome To Tracker App Using JavaFx" textFill="#070707">
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Welcome To Tracker App Using JavaFx" textFill="#070707" GridPane.halignment="CENTER">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
          </children>
       </GridPane>
-      <Button fx:id="startTrackingButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#startTracking" text="Start Tracking" GridPane.rowIndex="1">
+      <Button fx:id="startTrackingButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#startTracking" text="Start Tracking" GridPane.halignment="CENTER" GridPane.rowIndex="1">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="viewActivityButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#viewActivity" text="View Activity" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <Button fx:id="viewActivityButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#viewActivity" text="View Activity" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
