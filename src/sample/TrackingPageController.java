@@ -100,7 +100,7 @@ public class TrackingPageController implements Initializable {
             public void run() {
                 Platform.runLater(() -> {
 
-                    if (timeToSS % 10 == 0 && timeToSS != 0) {
+                    if (timeToSS % 300 == 0 && timeToSS != 0) {
                         takeScreenShots();
 
                     }

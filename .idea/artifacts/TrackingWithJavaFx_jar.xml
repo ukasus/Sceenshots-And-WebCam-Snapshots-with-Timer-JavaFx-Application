@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="TrackingWithJavaFx:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TrackingWithJavaFx_jar</output-path>
+    <root id="archive" name="Desktop.jar">
+      <element id="module-output" name="Desktop" />
+      <element id="extracted-dir" path="G:/OpenCV/opencv/build/java/opencv-451.jar" path-in-jar="/" />
+      <element id="library" level="project" name="x64" />
+    </root>
+  </artifact>
+</component>
